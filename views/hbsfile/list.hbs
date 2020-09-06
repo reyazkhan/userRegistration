@@ -1,0 +1,35 @@
+<h3>
+    <a class="btn btn-secondary" href="/user">
+        <i class="fa fa-plus"></i>
+        Register
+    </a>
+    User Login
+</h3>
+
+<form action="/user/login"  method="POST" autocomplete="off">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="Name" placeholder="Name" value="{{userData.fullname}}">
+        <div class="text-danger">
+            {{userData.fullnameError}}
+        </div>  
+    </div>
+    
+    <div class="form-group">
+        <label >Type</label>
+        <select name="type">
+            <option disabled>Choose One</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+
+        </select>  
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-info" >
+            Login
+        </button> 
+        
+    </div>
+</form>
